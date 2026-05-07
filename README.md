@@ -14,7 +14,7 @@ _A modern, lambda-friendly, 120 character Java formatter._
 - [IntelliJ plugin](https://plugins.jetbrains.com/plugin/13180-palantir-java-format)
 - [Gradle plugin](#palantir-java-format-gradle-plugin)
 - [Spotless](#spotless)
-- [Chronizer](#chronizer) _(third-party)_
+- [JHarmonizer](#jharmonizer) _(third-party)_
 
 It is based on the excellent [google-java-format](https://github.com/google/google-java-format), and benefits from the work of all the [original authors](https://github.com/google/google-java-format/graphs/contributors). palantir-java-format is available under the same [Apache 2.0 License](./LICENSE).
 
@@ -151,16 +151,16 @@ when formatting java code.
 - See [integration in Spotless Gradle plugin](https://github.com/diffplug/spotless/tree/main/plugin-gradle#palantir-java-format).
 - See [integration in Spotless Maven plugin](https://github.com/diffplug/spotless/tree/main/plugin-maven#palantir-java-format).
 
-## Chronizer
+## JHarmonizer
 
-> **Third-party tool.** Chronizer is an independent project and is not maintained by Palantir.
+> **Third-party tool.** JHarmonizer is an independent project and is not maintained by Palantir.
 
-[Chronizer](https://github.com/AntonLem/chronizer) provides additional integration options for `palantir-java-format`:
+[JHarmonizer](https://github.com/lemon-ant/JHarmonizer) provides additional integration options for `palantir-java-format`:
 
 - **CLI tool** – format Java source files directly from the command line without a build tool.
 - **Maven plugin** – apply `palantir-java-format` as part of a Maven build lifecycle.
 
-See the [Chronizer repository](https://github.com/AntonLem/chronizer) for installation instructions and configuration options.
+See the [JHarmonizer repository](https://github.com/lemon-ant/JHarmonizer) for installation instructions and configuration options.
 
 ## IntelliJ plugin
 
