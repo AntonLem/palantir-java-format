@@ -8,6 +8,8 @@
 
 # Palantir Java Format
 
+> **Disclaimer:** This is a community-maintained third-party tool and is not officially supported by Palantir Technologies.
+
 _A modern, lambda-friendly, 120 character Java formatter._
 
 - [Eclipse plugin](https://github.com/palantir/palantir-java-format/tree/develop/eclipse_plugin)
