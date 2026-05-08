@@ -8,8 +8,6 @@
 
 # Palantir Java Format
 
-> **Disclaimer:** This is a community-maintained third-party tool and is not officially supported by Palantir Technologies.
-
 _A modern, lambda-friendly, 120 character Java formatter._
 
 - [Eclipse plugin](https://github.com/palantir/palantir-java-format/tree/develop/eclipse_plugin)
@@ -154,6 +152,8 @@ when formatting java code.
 - See [integration in Spotless Maven plugin](https://github.com/diffplug/spotless/tree/main/plugin-maven#palantir-java-format).
 
 ## JHarmonizer
+
+> **Disclaimer:** This is a community-maintained third-party tool and is not officially supported by Palantir Technologies.
 
 [JHarmonizer](https://github.com/lemon-ant/JHarmonizer) sorts and formats
 Java source files. It reorders class members — fields, constructors,
