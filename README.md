@@ -153,12 +153,12 @@ when formatting java code.
 
 ## JHarmonizer
 
-> **Third-party tool.** JHarmonizer is an independent project and is not maintained by Palantir.
+> Third-party tool. JHarmonizer is an independent project and is not maintained by Palantir.
 
-[JHarmonizer](https://github.com/lemon-ant/JHarmonizer) provides additional integration options for `palantir-java-format`:
+[JHarmonizer](https://github.com/lemon-ant/JHarmonizer) sorts and formats Java source files. It reorders class members — fields, constructors, methods, nested types, and initializer blocks — according to configurable rules, then formats the result using `palantir-java-format`. Before reordering, JHarmonizer builds a declaration-order dependency graph to ensure the output compiles and runs correctly.
 
-- **CLI tool** – format Java source files directly from the command line without a build tool.
-- **Maven plugin** – apply `palantir-java-format` as part of a Maven build lifecycle.
+- **CLI tool** – sort and format Java source files directly from the command line without a build tool.
+- **Maven plugin** – apply member reordering and formatting as part of a Maven build lifecycle.
 
 See the [JHarmonizer repository](https://github.com/lemon-ant/JHarmonizer) for installation instructions and configuration options.
 
