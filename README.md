@@ -14,7 +14,7 @@ _A modern, lambda-friendly, 120 character Java formatter._
 - [IntelliJ plugin](https://plugins.jetbrains.com/plugin/13180-palantir-java-format)
 - [Gradle plugin](#palantir-java-format-gradle-plugin)
 - [Spotless](#spotless)
-- [JHarmonizer](#jharmonizer) _(third-party)_
+- [JHarmonizer](#jharmonizer)
 
 It is based on the excellent [google-java-format](https://github.com/google/google-java-format), and benefits from the work of all the [original authors](https://github.com/google/google-java-format/graphs/contributors). palantir-java-format is available under the same [Apache 2.0 License](./LICENSE).
 
@@ -153,15 +153,12 @@ when formatting java code.
 
 ## JHarmonizer
 
-> Third-party tool. JHarmonizer is an independent project and is not maintained by Palantir.
-
 [JHarmonizer](https://github.com/lemon-ant/JHarmonizer) sorts and formats Java source files. It reorders class members — fields, constructors, methods, nested types, and initializer blocks — according to configurable rules, then formats the result using `palantir-java-format`. Before reordering, JHarmonizer analyses the relationships between class members (for example, which fields are read by which initializers) to ensure the reordered source still compiles and behaves correctly.
 
 JHarmonizer works in three modes:
 
 - **Reorder and format** – automatically reorder and format sources during the build or from the command line.
 - **Check** – verify that sources are already correctly ordered and formatted; fail the build (or report all violations) if they are not. Useful for enforcing standards in CI.
-- **Git hooks** – set up pre-commit or pre-push hooks so that every commit is guaranteed to be sorted and formatted before it reaches the repository.
 
 It is available as:
 
