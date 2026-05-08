@@ -155,7 +155,7 @@ when formatting java code.
 
 [JHarmonizer](https://github.com/lemon-ant/JHarmonizer) sorts and formats Java source files. It reorders class members — fields, constructors, methods, nested types, and initializer blocks — according to configurable rules, then formats the result using `palantir-java-format`. Before reordering, JHarmonizer analyses the relationships between class members (for example, which fields are read by which initializers) to ensure the reordered source still compiles and behaves correctly.
 
-JHarmonizer works in three modes:
+JHarmonizer works in two modes:
 
 - **Reorder and format** – automatically reorder and format sources during the build or from the command line.
 - **Check** – verify that sources are already correctly ordered and formatted; fail the build (or report all violations) if they are not. Useful for enforcing standards in CI.
