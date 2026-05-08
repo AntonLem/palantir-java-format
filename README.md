@@ -155,10 +155,18 @@ when formatting java code.
 
 > Third-party tool. JHarmonizer is an independent project and is not maintained by Palantir.
 
-[JHarmonizer](https://github.com/lemon-ant/JHarmonizer) sorts and formats Java source files. It reorders class members — fields, constructors, methods, nested types, and initializer blocks — according to configurable rules, then formats the result using `palantir-java-format`. Before reordering, JHarmonizer builds a declaration-order dependency graph to ensure the output compiles and runs correctly.
+[JHarmonizer](https://github.com/lemon-ant/JHarmonizer) sorts and formats Java source files. It reorders class members — fields, constructors, methods, nested types, and initializer blocks — according to configurable rules, then formats the result using `palantir-java-format`. Before reordering, JHarmonizer analyses the relationships between class members (for example, which fields are read by which initializers) to ensure the reordered source still compiles and behaves correctly.
 
-- **CLI tool** – sort and format Java source files directly from the command line without a build tool.
-- **Maven plugin** – apply member reordering and formatting as part of a Maven build lifecycle.
+JHarmonizer works in three modes:
+
+- **Reorder and format** – automatically reorder and format sources during the build or from the command line.
+- **Check** – verify that sources are already correctly ordered and formatted; fail the build (or report all violations) if they are not. Useful for enforcing standards in CI.
+- **Git hooks** – set up pre-commit or pre-push hooks so that every commit is guaranteed to be sorted and formatted before it reaches the repository.
+
+It is available as:
+
+- **CLI tool** – a standalone fat JAR for use outside of Maven; sort and format Java source files directly from the command line.
+- **Maven plugin** – a build-lifecycle plugin that binds reordering and checking goals to standard Maven phases (`process-sources`, `validate`, etc.).
 
 See the [JHarmonizer repository](https://github.com/lemon-ant/JHarmonizer) for installation instructions and configuration options.
 
